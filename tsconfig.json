@@ -1,24 +1,17 @@
 {
     "compilerOptions": {
-        "module": "ESNext",
-        "esModuleInterop": true,
-        "target": "ESNext",
-        "moduleResolution": "Node",
-        "outDir": "dist",
-        "forceConsistentCasingInFileNames": true,
-        "noFallthroughCasesInSwitch": true,
-        "isolatedModules": false,
-        "strict": true,
-        "noImplicitAny": true,
-        "useUnknownInCatchVariables": false,
-        "inlineSourceMap": true,
-        "baseUrl": "./src",
-        "types": [
-            "bun-types" // add Bun global
-        ]
+        "lib": ["es5", "es6"],
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./build",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "esModuleInterop": true
     },
+    "exclude": ["node_modules"],
     "ts-node": {
-        "esm": true
-    },
-    "lib": ["esnext"]
+        "require": ["tsconfig-paths/register"]
+    }
 }

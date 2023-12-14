@@ -1,47 +1,54 @@
 {
-  "name": "telegram-private-file-storage",
-  "version": "0.0.1",
-  "description": "Telegram sharable file storage in private",
-  "main": "src/main.ts",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"bun watch-compile\" \"bun watch-dev\"",
-    "watch-compile": "swc src -w --out-dir dist",
-    "watch-dev": "nodemon",
-    "build": "swc src -d dist",
-    "start": "NODE_ENV=production bun dist/main.js",
-    "clean": "rm -rf dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/evokelektrique/telegram-private-file-storage.git"
-  },
-  "keywords": [
-    "Telegram",
-    "Storage",
-    "Share",
-    "Files"
-  ],
-  "author": "EVOKE",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/evokelektrique/telegram-private-file-storage/issues"
-  },
-  "homepage": "https://github.com/evokelektrique/telegram-private-file-storage#readme",
-  "dependencies": {
-    "concurrently": "^8.2.1",
-    "node-telegram-bot-api": "^0.64.0",
-    "nodemon": "^3.0.1",
-    "tsx": "^4.6.2"
-  },
-  "devDependencies": {
-    "@swc/cli": "^0.1.62",
-    "@swc/core": "^1.3.91",
-    "@types/node-telegram-bot-api": "^0.64.0",
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "name": "telegram-private-file-storage",
+    "version": "0.0.1",
+    "description": "Telegram sharable file storage in private",
+    "main": "src/index.ts",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "concurrently \"bun watch-dev\"",
+        "watch-dev": "nodemon",
+        "start": "bun src/index.ts",
+        "typeorm": "typeorm-ts-node-commonjs"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/evokelektrique/telegram-private-file-storage.git"
+    },
+    "keywords": [
+        "Telegram",
+        "Storage",
+        "Share",
+        "Files"
+    ],
+    "author": "EVOKE",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/evokelektrique/telegram-private-file-storage/issues"
+    },
+    "homepage": "https://github.com/evokelektrique/telegram-private-file-storage#readme",
+    "dependencies": {
+        "@types/node": "^20.10.4",
+        "concurrently": "^8.2.1",
+        "node-telegram-bot-api": "^0.64.0",
+        "nodemon": "^3.0.1",
+        "pg": "^8.4.0",
+        "reflect-metadata": "^0.1.13",
+        "tsconfig-paths": "^4.2.0",
+        "tsx": "^4.6.2",
+        "typeorm": "0.3.17",
+        "winston": "^3.10.0",
+        "winston-daily-rotate-file": "^4.7.1"
+    },
+    "devDependencies": {
+        "@swc/cli": "^0.1.62",
+        "@swc/core": "^1.3.91",
+        "@types/node-telegram-bot-api": "^0.64.0",
+        "bun-types": "latest",
+        "ts-node": "^10.9.2",
+        "typescript": "4.5.2"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
 }
