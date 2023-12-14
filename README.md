@@ -53,6 +53,12 @@ Clone the repository:
 git clone https://github.com/evokelektrique/telegram-private-file-storage
 ```
 
+Copy the .env.example file:
+
+```bash
+cp .env.example .env
+```
+
 Ensure you have [Node.js](https://nodejs.org/) or [bun](https://bun.sh/) installed on your machine. Then, run the following command to install the project dependencies:
 
 ```bash
